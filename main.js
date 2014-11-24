@@ -3,10 +3,10 @@ angular.module('gitSearchApp', [])
         $scope.searchGit = function() {
             console.log('git search initiated');
             $http.get('https://api.github.com/search/repositories?q=' + $scope.searchGitText).
-                success(function(data, status, headers, config) {
-                    
+                success(function(data) {
+                    $scope.searchResults = data.items;
                 }).
-                error(function(data, status, headers, config) {
+                error(function(data) {
                     console.log('error');
                 
             })

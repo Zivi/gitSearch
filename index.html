@@ -19,10 +19,11 @@
                 </div>
             </form>
         </div>
-        <li ng-repeat="searchResult in searchResults">
-
-        </li>
-
+        <ul>
+            <li ng-repeat="searchResult in searchResults">
+                <a href="{{searchResult.html_url}}">{{searchResult.name}}</a>
+            </li>
+        </ul>
     </body>
 
 </html>
