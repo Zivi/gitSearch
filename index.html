@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="gitSearchApp">
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js">
+        </script>
+        <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body ng-controller="gitSearchController">
+        <div class="page-header">
+            <h1>Find your repo</h1>
+            <form ng-submit="searchGit()">
+                <div id="search-field" class="input-group">
+                    <input id="search-text" type="text" ng-model="searchGitText" class="form-control" placeholder="repo name">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <li ng-repeat="searchResult in searchResults">
+
+        </li>
+
+    </body>
+
+</html>
